@@ -1,7 +1,6 @@
 """Mirrors the sheet "יומן משפז משגב" into the two public calendars.
 
-הורים משגב gets the rows whose יומן column says הורים משגב; צוות משגב gets every row (staff see
-everything). Only events this script created (tag source=gantt-tashpaz) are touched: missing ones
+Each row goes to the calendar named in its יומן column (הורים משגב or צוות משגב). Only events this script created (tag source=gantt-tashpaz) are touched: missing ones
 are added, changed ones updated, rows that left the sheet (or the parents' calendar) deleted.
 
     python3 tools/sync_calendars.py            # show what would change
@@ -69,7 +68,7 @@ def calendar_events(cid):
 
 def main(apply):
     rows = sheet_events()
-    wanted = {'הורים משגב': [e for e in rows if e['cal'] == 'הורים משגב'], 'צוות משגב': rows}
+    wanted = {name: [e for e in rows if e['cal'] == name] for name in CALENDARS}
     for name, cid in CALENDARS.items():
         want = {key(e): e for e in wanted[name]}
         have = calendar_events(cid)

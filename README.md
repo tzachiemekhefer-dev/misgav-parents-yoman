@@ -24,7 +24,7 @@ Source of the data: the school's gantt PDF "לוח גאנט משגב תשפז" (
 Columns: מתאריך · עד תאריך · יום · מס׳ ימים · אירוע · סוג · **יומן** · פירוט מהגאנט.
 
 - **יומן** decides who sees the row: `הורים משגב` rows go to the parents' calendar and page; `צוות משגב` rows
-  (staff meetings, pedagogical weeks) go only to the staff calendar. The staff calendar gets **every** row.
+  (staff meetings, pedagogical weeks) go to the staff calendar. Each row is in exactly one calendar.
 - **סוג** is the event type; it colours the row and is the filter on the parents' page
   (חופשה / חג, טיול, אירוע / פעילות, מפגשי הורים, יום זיכרון / ציון, צוות, פדגוגיות).
 - One row per event; a multi-day vacation is one row (weekends inside it included).
