@@ -91,7 +91,10 @@
 
   /* header */
   header.hero {
-    background: linear-gradient(160deg, #234a20 0%, #3f7d3a 55%, #5c9a4f 100%);
+    /* photo: img/hero.jpg (Pexels, see img/CREDITS.txt) under a green overlay that keeps the text readable; same in both themes */
+    background:
+      linear-gradient(180deg, rgba(25, 56, 22, .84) 0%, rgba(47, 94, 42, .62) 55%, rgba(25, 56, 22, .80) 100%),
+      url("img/hero.jpg") center 40% / cover no-repeat, #3f7d3a;
     color: #fff; padding: 40px 0 76px; position: relative; overflow: hidden;
   }
   header.hero::after { /* rolling fields */
@@ -109,8 +112,8 @@
   @media (prefers-reduced-motion: reduce) { .hero .eyebrow i { animation: none; } }
   .hero h1 { font-size: clamp(30px, 8vw, 44px); line-height: 1.1; margin: 14px 0 6px; font-weight: 800; letter-spacing: -.5px; }
   .hero h1 span { color: var(--sun); }
-  .hero p { margin: 0; font-size: 17px; opacity: .95; max-width: 34ch; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
-  .hero h1 { text-shadow: 0 2px 14px rgba(0,0,0,.25); }
+  .hero p { margin: 0; font-size: 17px; opacity: .95; max-width: 34ch; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+  .hero h1 { text-shadow: 0 2px 14px rgba(0,0,0,.35); }
   .hero .notify { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 14px; min-height: 40px;
     border-radius: 14px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); color: #fff;
     font-size: 15px; font-weight: 500; text-decoration: none; backdrop-filter: blur(4px); }
