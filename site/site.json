@@ -1,7 +1,44 @@
 {
  "siteUrl": "https://tzachiemekhefer-dev.github.io/misgav-parents-yoman/",
- "calendar": {
-  "name": "הורים משגב",
-  "id": "cd5d688778e1a2d1446de86c2049401996c2a4c85cf62029ca814053b19abc82@group.calendar.google.com"
- }
+ "pages": [
+  {
+   "path": "",
+   "store": "misgav",
+   "noindex": false,
+   "calendar": {
+    "name": "הורים משגב",
+    "id": "cd5d688778e1a2d1446de86c2049401996c2a4c85cf62029ca814053b19abc82@group.calendar.google.com"
+   },
+   "title": "בי״ס משגב – יומן הורים",
+   "description": "יומן שנת הלימודים תשפ״ז של בית הספר משגב – חופשות, טיולים, טקסים ואסיפות הורים – עם הוספה ליומן בטלפון.",
+   "h1": "יומן הורים <span>משגב</span>",
+   "intro": "כל החופשות, הטיולים, הטקסים ואסיפות ההורים של בית הספר – במקום אחד.",
+   "notify": "„רגע, מחר יש בית ספר?״ 🤔<br>הוסיפו את היומן לטלפון ותמיד תדעו. ממש בקלות",
+   "cats": [
+    { "key": "חופשה / חג",        "label": "חופשות",     "color": "var(--c-off)" },
+    { "key": "טיול",              "label": "טיולים",     "color": "var(--c-trip)" },
+    { "key": "אירוע / פעילות",    "label": "אירועים",    "color": "var(--c-act)" },
+    { "key": "מפגשי הורים",       "label": "הורים",      "color": "var(--c-par)" },
+    { "key": "יום זיכרון / ציון", "label": "ימי זיכרון", "color": "var(--c-mem)" }
+   ]
+  },
+  {
+   "path": "staff/",
+   "store": "misgav-staff",
+   "noindex": true,
+   "calendar": {
+    "name": "צוות משגב",
+    "id": "329440dca224a5c0244fd9bd3358e1d0deeeaa5ebe009a0c9607420491645fa5@group.calendar.google.com"
+   },
+   "title": "בי״ס משגב – יומן צוות",
+   "description": "יומן הצוות של בית הספר משגב לשנת תשפ״ז – מפגשי צוות ושבועות פדגוגיות – עם הוספה ליומן בטלפון.",
+   "h1": "יומן צוות <span>משגב</span>",
+   "intro": "כל מפגשי הצוות והשבועות הפדגוגיים של שנת תשפ״ז – במקום אחד.",
+   "notify": "„מתי מפגש הצוות הבא?״ 🤔<br>הוסיפו את יומן הצוות לטלפון ותמיד תדעו. ממש בקלות",
+   "cats": [
+    { "key": "צוות",     "label": "מפגשי צוות", "color": "var(--c-staff)" },
+    { "key": "פדגוגיות", "label": "פדגוגיות",   "color": "var(--c-ped)" }
+   ]
+  }
+ ]
 }

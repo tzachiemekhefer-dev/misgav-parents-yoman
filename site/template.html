@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>בי״ס משגב – יומן הורים</title>
-<meta name="description" content="יומן שנת הלימודים תשפ״ז של בית הספר משגב – חופשות, טיולים, טקסים ואסיפות הורים – עם הוספה ליומן בטלפון.">
+<title>__TITLE__</title>
+<meta name="description" content="__DESCRIPTION__">
+__ROBOTS__
 <meta property="og:type" content="website">
-<meta property="og:url" content="__SITE_URL__">
-<meta property="og:title" content="בי״ס משגב – יומן הורים">
-<meta property="og:description" content="יומן שנת הלימודים תשפ״ז של בית הספר משגב – חופשות, טיולים, טקסים ואסיפות הורים – עם הוספה ליומן בטלפון.">
+<meta property="og:url" content="__PAGE_URL__">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__DESCRIPTION__">
 <meta property="og:image" content="__SITE_URL__img/logo-misgav.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="364">
 <meta property="og:image:height" content="356">
 <meta property="og:locale" content="he_IL">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="img/logo-misgav.png" type="image/png">
+<link rel="icon" href="__ROOT__img/logo-misgav.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -37,6 +38,8 @@
     --c-mem: #2b5797;
     --c-par: #b7790f;
     --c-act: #8e3f87;
+    --c-staff: #5b45b0;
+    --c-ped: #a37c00;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -44,6 +47,7 @@
       --line: #2f3a33; --brand: #6cc36a; --brand-ink: #0d1a12; --sun: #f2b33d;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
       --c-off: #ff7088; --c-trip: #6fcf73; --c-mem: #7ea8ff; --c-par: #f2b33d; --c-act: #e08ad9;
+      --c-staff: #a99bf2; --c-ped: #f2cf4d;
     }
   }
   :root[data-theme="dark"] {
@@ -51,6 +55,7 @@
     --line: #2f3a33; --brand: #6cc36a; --brand-ink: #0d1a12; --sun: #f2b33d;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
     --c-off: #ff7088; --c-trip: #6fcf73; --c-mem: #7ea8ff; --c-par: #f2b33d; --c-act: #e08ad9;
+    --c-staff: #a99bf2; --c-ped: #f2cf4d;
   }
 
   * { box-sizing: border-box; }
@@ -94,7 +99,7 @@
     /* photo: img/hero.jpg (Pexels, see img/CREDITS.txt) under a green overlay that keeps the text readable; same in both themes */
     background:
       linear-gradient(180deg, rgba(25, 56, 22, .84) 0%, rgba(47, 94, 42, .62) 55%, rgba(25, 56, 22, .80) 100%),
-      url("img/hero.jpg") center 40% / cover no-repeat, #3f7d3a;
+      url("__ROOT__img/hero.jpg") center 40% / cover no-repeat, #3f7d3a;
     color: #fff; padding: 40px 0 76px; position: relative; overflow: hidden;
   }
   header.hero::after { /* rolling fields */
@@ -148,10 +153,10 @@
   /* section titles */
   h2.section { font-size: 15px; font-weight: 700; color: var(--muted); margin: 28px 0 10px; letter-spacing: .2px; }
 
-  /* filter chips: five compact tiles in one row, sticky under the menu while scrolling the months */
+  /* filter chips: one row of compact tiles (one per event type), sticky under the menu while scrolling the months */
   .filterbar { position: sticky; top: var(--nav-h); z-index: 3; background: var(--bg); margin: 0 -16px; padding: 8px 16px;
     box-shadow: 0 8px 10px -10px rgba(0, 0, 0, .25); }
-  .chips { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .chips { display: grid; grid-template-columns: repeat(var(--n, 5), minmax(0, 1fr)); gap: 6px; }
   .chip { --c: var(--brand); appearance: none; border: 1.5px solid var(--line); background: var(--surface); color: var(--text);
     font: inherit; font-size: 13px; font-weight: 600; padding: 5px 6px; border-radius: 10px; cursor: pointer; width: 100%; min-width: 0;
     display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; text-align: center;
@@ -264,11 +269,11 @@
   <div class="wrap">
     <div>
       <span class="eyebrow"><i></i> שנת הלימודים תשפ״ז</span>
-      <h1>יומן הורים <span>משגב</span></h1>
-      <p>כל החופשות, הטיולים, הטקסים ואסיפות ההורים של בית הספר – במקום אחד.</p>
-      <a class="notify" href="#subscribe"><span class="bell" aria-hidden="true">🔔</span><span class="txt">„רגע, מחר יש בית ספר?״ 🤔<br>הוסיפו את היומן לטלפון ותמיד תדעו. ממש בקלות</span><span aria-hidden="true">←</span></a>
+      <h1>__H1__</h1>
+      <p>__INTRO__</p>
+      <a class="notify" href="#subscribe"><span class="bell" aria-hidden="true">🔔</span><span class="txt">__NOTIFY__</span><span aria-hidden="true">←</span></a>
     </div>
-    <img class="logo" src="img/logo-misgav.png" alt="בית הספר הממלכתי משגב" width="124" height="121">
+    <img class="logo" src="__ROOT__img/logo-misgav.png" alt="בית הספר הממלכתי משגב" width="124" height="121">
   </div>
 </header>
 
@@ -291,17 +296,13 @@
 <footer>בית הספר הממלכתי משגב · מ.א. עמק חפר · תשפ״ז<br><span id="updated"></span></footer>
 
 <script>
-// Snapshot baked in at build time from the public parents' calendar (rebuilt daily).
+// Snapshot baked in at build time from this page's public calendar (rebuilt daily).
 const DATA = __DATA__;
+// This page's settings from site.json: the event types it filters by, and its storage key prefix.
+const PAGE = __PAGE__;
 
 // event type -> display info (order = chip order); keys match the sheet's סוג column
-const CATS = [
-  { key: 'חופשה / חג',        label: 'חופשות',  long: 'חופשה / חג',     color: 'var(--c-off)' },
-  { key: 'טיול',              label: 'טיולים',  long: 'טיול',           color: 'var(--c-trip)' },
-  { key: 'אירוע / פעילות',    label: 'אירועים', long: 'אירוע / פעילות', color: 'var(--c-act)' },
-  { key: 'מפגשי הורים',       label: 'הורים',   long: 'מפגשי הורים',    color: 'var(--c-par)' },
-  { key: 'יום זיכרון / ציון', label: 'ימי זיכרון', long: 'יום זיכרון / ציון', color: 'var(--c-mem)' },
-];
+const CATS = PAGE.cats.map(c => ({ ...c, long: c.key }));
 const CAT = Object.fromEntries(CATS.map(c => [c.key, c]));
 const OTHER = { key: '', label: 'אחר', long: 'אחר', color: 'var(--brand)' };
 const catOf = e => CAT[e.cat] || OTHER;
@@ -326,8 +327,8 @@ const events = DATA.events.map(e => {
   return { ...e, s, en, multi: en > s };
 }).sort((a, b) => a.s - b.s || a.en - b.en || a.title.localeCompare(b.title, 'he'));
 
-let selected = new Set(store.get('misgav:cats', CATS.map(c => c.key)).filter(k => CAT[k]));
-let showPast = store.get('misgav:past', false);
+let selected = new Set(store.get(PAGE.store + ':cats', CATS.map(c => c.key)).filter(k => CAT[k]));
+let showPast = store.get(PAGE.store + ':past', false);
 
 function chip(c) {
   const b = document.createElement('button');
@@ -338,7 +339,7 @@ function chip(c) {
   b.onclick = () => {
     selected.has(c.key) ? selected.delete(c.key) : selected.add(c.key);
     b.setAttribute('aria-pressed', selected.has(c.key));
-    store.set('misgav:cats', [...selected]); render();
+    store.set(PAGE.store + ':cats', [...selected]); render();
   };
   return b;
 }
@@ -482,10 +483,11 @@ function renderSubs() {
 }
 
 const chips = document.getElementById('chips');
+chips.style.setProperty('--n', CATS.length);
 CATS.forEach(c => chips.append(chip(c)));
 const pastBox = document.getElementById('showPast');
 pastBox.checked = showPast;
-pastBox.onchange = () => { showPast = pastBox.checked; store.set('misgav:past', showPast); render(); };
+pastBox.onchange = () => { showPast = pastBox.checked; store.set(PAGE.store + ':past', showPast); render(); };
 document.getElementById('updated').textContent = 'עודכן לאחרונה: ' +
   new Date(DATA.generatedAt).toLocaleString('he-IL', { day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Jerusalem' });
 const filterbar = document.getElementById('filterbar');
