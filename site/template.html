@@ -96,10 +96,10 @@ __ROBOTS__
 
   /* header */
   header.hero {
-    /* photo: img/hero.jpg (Pexels, see img/CREDITS.txt) under a green overlay that keeps the text readable; same in both themes */
+    /* photo: per page (site.json "hero"; sources in img/CREDITS.txt) under a green overlay that keeps the text readable; same in both themes */
     background:
       linear-gradient(180deg, rgba(25, 56, 22, .84) 0%, rgba(47, 94, 42, .62) 55%, rgba(25, 56, 22, .80) 100%),
-      url("__ROOT__img/hero.jpg") center 40% / cover no-repeat, #3f7d3a;
+      url("__ROOT____HERO__") __HERO_POS__ / cover no-repeat, #3f7d3a;
     color: #fff; padding: 40px 0 76px; position: relative; overflow: hidden;
   }
   header.hero::after { /* rolling fields */

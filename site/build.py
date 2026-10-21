@@ -25,6 +25,8 @@ for page in site['pages']:
            .replace('__NOTIFY__', page['notify'])
            .replace('__PAGE_URL__', site['siteUrl'] + page['path'])
            .replace('__SITE_URL__', site['siteUrl'])
+           .replace('__HERO_POS__', page['heroPos'])
+           .replace('__HERO__', page['hero'])
            .replace('__ROOT__', '../' * page['path'].count('/'))
            .replace('__PAGE__', json.dumps(page_cfg, ensure_ascii=False))
            .replace('__DATA__', json.dumps(page_data, ensure_ascii=False)))

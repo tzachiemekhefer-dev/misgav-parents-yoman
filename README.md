@@ -46,11 +46,11 @@ tzachi.emek.hefer@gmail.com at `~/.config/secrets/tzachi.emek.hefer@gmail.com/go
 
 | File | Role |
 |---|---|
-| `site.json` | Site URL and one entry per page: path, calendar, texts, filter chips (event types) |
+| `site.json` | Site URL and one entry per page: path, calendar, header photo and its crop, texts, filter chips (event types) |
 | `fetch_data.py` | Downloads each page's calendar (public iCal feed) into `data.json` (no credentials) |
 | `build.py` | Fills `template.html` per page → `dist/index.html`, `dist/staff/index.html` + `dist/img/` |
 | `template.html` | The whole page (Hebrew, RTL, mobile-first, light/dark), based on the נוער חלח״צ page |
-| `img/` | `logo-misgav.png` (from the gantt PDF), `hero.jpg` (Pexels); sources in `img/CREDITS.txt` |
+| `img/` | `logo-misgav.png` (from the gantt PDF), header photos `hero.jpg` (parents) and `hero-staff.jpg` (staff), both Pexels; sources in `img/CREDITS.txt` |
 
 Shows: a countdown to the next event, filter chips per event type (remembered per device), the current month in full
 and later months as collapsible cards, "add to my calendar" per event, and subscribe buttons (Google / iPhone).

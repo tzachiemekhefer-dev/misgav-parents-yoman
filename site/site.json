@@ -4,6 +4,8 @@
   {
    "path": "",
    "store": "misgav",
+   "hero": "img/hero.jpg",
+   "heroPos": "center 40%",
    "noindex": false,
    "calendar": {
     "name": "הורים משגב",
@@ -25,6 +27,8 @@
   {
    "path": "staff/",
    "store": "misgav-staff",
+   "hero": "img/hero-staff.jpg",
+   "heroPos": "center 85%",
    "noindex": true,
    "calendar": {
     "name": "צוות משגב",
